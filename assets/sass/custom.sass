@@ -1,0 +1,29 @@
+.container
+    @media screen and (min-width: 1200px)
+        max-width: 1300px
+
+$prime: #ff6201
+
+.vlt
+    &-ul
+        padding: 0
+        list-style: none
+        li
+            line-height: 130%
+            padding: 2px 0
+            &::before
+                content: '✓'
+                margin-right: 4px
+                color: $prime !important
+    &-navbar-inner--center
+        .container
+            max-width: 1400px
+
+    &-medium
+        &-heading
+            font-size: 49px
+
+    &-home
+        &-container
+            @media screen and (min-width: 1200px)
+                max-width: 1300px
