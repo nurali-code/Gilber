@@ -2507,10 +2507,10 @@ textarea:focus::-webkit-input-placeholder {
 	-webkit-flex: 1 1 auto;
 	-ms-flex: 1 1 auto;
 	flex: 1 1 auto;
-	-webkit-box-align: end;
-	-webkit-align-items: end;
-	-ms-flex-align: end;
-	align-items: end
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center
 }
 
 @media only screen and (max-width:575px) {
@@ -2708,12 +2708,12 @@ textarea:focus::-webkit-input-placeholder {
 
 .vlt-partners li img {
 	max-width: 100%;
-	-webkit-transition: opacity .3s;
-	transition: opacity .3s;
+	filter: grayscale(1);
 	opacity: .4
 }
 
 .vlt-partners li img:hover {
+	filter: grayscale(0);
 	opacity: 1
 }
 
