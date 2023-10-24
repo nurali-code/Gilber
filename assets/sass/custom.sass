@@ -4,7 +4,68 @@
 
 $prime: #ff6201
 
+button
+    cursor: pointer
+    background-color: transparent
+    border: none
+
 .vlt
+    &-product
+        &-content
+            position: relative
+            z-index: 1
+        &-prev,
+        &-next
+            background-image: url('../assets/img/arrow.png')
+            background-repeat: no-repeat
+            background-position: center center
+            background-size: contain
+            width: 20px
+            height: 40px
+            margin-top: -20px
+            position: absolute
+            top: 50%
+            left: -40px
+            transform: scale(-1)
+            &.swiper-button-disabled
+                opacity: 0
+        &-next
+            left: auto
+            right: -40px
+            transform: scale(1)
+
+        &-btns
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+        &_btn
+            background-color: transparent
+            padding: 0 0 0 10px
+            border: none
+            text-align: left
+            font-size: 22px
+            line-height: 120%
+            font-weight: 500
+            &.active
+                font-weight: 700
+                color: $prime
+
+        &_item
+            width: 50%
+            &-img
+                margin-bottom: 20px
+                img
+                    display: block
+                    width: 100%
+            &__heading
+                color: $prime
+                font-size: 24px
+                margin: 0 0 15px
+
+            &__text
+                font-size: 18px
+                line-height: 130%
+                margin: 0
     &-ul
         padding: 0
         list-style: none
@@ -22,8 +83,41 @@ $prime: #ff6201
     &-medium
         &-heading
             font-size: 49px
+            line-height: 100%
 
     &-home
         &-container
             @media screen and (min-width: 1200px)
                 max-width: 1300px
+
+    &-social
+        &-icon
+            width: 35px
+            display: inline-block
+            img
+                display: block
+
+    @media screen and ( max-width: 1024px )
+        &-large
+            &-heading
+                font-size: 60px
+
+        &-medium
+            &-heading
+                font-size: 30px
+
+@media screen and ( max-width: 1024px )
+    .h1.vlt-large-heading,
+    h1.vlt-large-heading
+        font-size: 61px
+
+@media screen and ( max-width: 704px )
+    .vlt-home-container
+        padding-top: 200px
+
+    .vlt-navbar .vlt-navbar-inner
+        padding: 15px 30px
+
+    .container
+        // padding-left: 15px
+        // padding-right: 15px

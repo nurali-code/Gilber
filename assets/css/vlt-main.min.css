@@ -853,7 +853,7 @@ h1 {
 h1.vlt-large-heading {
 	font-size: 7.2rem;
 	font-weight: 700;
-	line-height: 60%;
+	line-height: 100%;
 }
 
 .h2,
@@ -1426,10 +1426,7 @@ textarea:focus::-webkit-input-placeholder {
 	-webkit-align-items: center;
 	-ms-flex-align: center;
 	align-items: center;
-	-webkit-box-pack: justify;
-	-webkit-justify-content: space-between;
-	-ms-flex-pack: justify;
-	justify-content: space-between
+	justify-content: flex-end;
 }
 
 @media only screen and (max-width:575px) {
@@ -1446,10 +1443,6 @@ textarea:focus::-webkit-input-placeholder {
 
 .vlt-offcanvas-menu__header .vlt-language-switcher {
 	font-size: .8125rem
-}
-
-.vlt-offcanvas-menu__header .vlt-menu-burger:hover {
-	color: #fff
 }
 
 .vlt-offcanvas-menu__navigation {
@@ -1721,7 +1714,7 @@ textarea:focus::-webkit-input-placeholder {
 
 [data-anchor=Home] p {
 	font-size: .9375rem;
-	max-width: 100%;
+	max-width: 90%;
 	color: rgba(0, 0, 0, .6)
 }
 
@@ -2126,7 +2119,7 @@ textarea:focus::-webkit-input-placeholder {
 .vlt-fixed-socials {
 	position: fixed;
 	z-index: 10;
-	top: 0;
+	top: 20px;
 	left: 1.1875rem;
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -2153,7 +2146,7 @@ textarea:focus::-webkit-input-placeholder {
 	height: 100%;
 	margin: 0 auto;
 	content: '';
-	background-color: rgba(255, 255, 255, .4)
+	background-color: #ff6201;
 }
 
 .vlt-fixed-socials::before {
@@ -2166,7 +2159,7 @@ textarea:focus::-webkit-input-placeholder {
 
 @media only screen and (min-width:1200px) {
 	.vlt-fixed-socials {
-		left: 3.0625rem;
+		left: 34px;
 		padding: 6.25rem 0
 	}
 }
@@ -2578,13 +2571,14 @@ textarea:focus::-webkit-input-placeholder {
 	display: none
 }
 
-@media only screen and (max-width:575px) {
+@media only screen and (max-width:900px) {
 	.vlt-fullpage-slider .vlt-section .vlt-section__ken-burn-background.has-mobile-image img:nth-child(1) {
 		display: none
 	}
 
 	.vlt-fullpage-slider .vlt-section .vlt-section__ken-burn-background.has-mobile-image img:nth-child(2) {
-		display: block
+		display: block;
+		object-position: top;
 	}
 }
 
@@ -2627,14 +2621,14 @@ textarea:focus::-webkit-input-placeholder {
 	-ms-transform: translate(0, -50%);
 	transform: translate(0, -50%);
 	border-radius: .3125rem;
-	background-color: #fff;
+	background-color: #707174;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden
 }
 
 @media only screen and (min-width:1200px) {
 	.vlt-fullpage-slider-progress-bar {
-		right: 3.75rem
+		right: 46px;
 	}
 }
 
