@@ -96,28 +96,32 @@ table
             transform: translateY(-50%)
 
     @media screen and ( max-width: 900px )
-        &_btn 
-            top: 100px
-        &-info 
-            max-width: 90%
-            margin: 0 auto 
+        &-content
+            padding: 120px 0
+
+        &-info
+            max-width: 92%
+            margin: 0 auto
+            top: -90px
+            position: relative
 
     @media screen and ( max-width: 700px )
-        &_btn 
-            top: 93px
+        &-content
+            padding: 90px 0 50px
+        &_btn
             &::after
-                background-size: 80px auto 
+                background-size: 80px auto
                 background-position: center top 70px
         &_heading
             font-size: 20px
             line-height: 120%
             margin-bottom: 20px
-            img 
+            img
                 margin: 0
                 max-width: 40%
-        &-info 
+        &-info
             padding: 40px 30px
-            p 
+            p
                 font-size: 14px
 
 .vlt
