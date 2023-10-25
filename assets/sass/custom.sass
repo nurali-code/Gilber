@@ -21,17 +21,110 @@ tr
 table
     width: 100%
     margin-bottom: 20px
-    td 
+    td
         line-height: 130%
+        font-size: 16px
         padding: 8px 10px 8px 0px
-    tr 
+        &:last-child
+            padding-right: 0
+        @media screen and ( max-width: 700px )
+            font-size: 14px
+    tr
         border-bottom: 1px dashed #767676
 
-.reclam
+.presentation
+    &_btn
+        position: relative
+        z-index: 1
+        &::after
+            transition: all ease .3s
+            content: ''
+            display: block
+            width: 100%
+            height: 100%
+            position: absolute
+            top: 0
+            left: 0
+            background-color: rgba(0, 0, 0, .1)
+            background-image: url('../assets/img/play.svg')
+            background-repeat: no-repeat
+            z-index: 1111
+            background-size: 150px auto
+            background-position: center center
+        &:active
+            &::after
 
+                transform: scale(.98)
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            position: relative
+            z-index: -1
+
+        @media screen and ( min-width: 900px )
+            position: absolute
+            bottom: 0
+            left: 0
+            height: calc( 100% - 110px )
+            width: 65%
+
+    &_heading
+        font-size: 26px
+        font-weight: bold
+        line-height: 120%
+        margin-bottom: 10px
+        span, img
+            font-size: 30px
+            display: inline-block
+            vertical-align: middle
+            margin: 0 10px
+
+    &-info
+
+        background-color: #fff
+        z-index: 1111
+        padding: 40px 40px 50px
+        p
+            line-height: 120%
+
+        @media screen and ( min-width: 900px )
+            position: absolute
+            top: 55%
+            right: 80px
+            width: 45%
+            transform: translateY(-50%)
+
+    @media screen and ( max-width: 900px )
+        &_btn 
+            top: 100px
+        &-info 
+            max-width: 90%
+            margin: 0 auto 
+
+    @media screen and ( max-width: 700px )
+        &_btn 
+            top: 93px
+            &::after
+                background-size: 80px auto 
+                background-position: center top 70px
+        &_heading
+            font-size: 20px
+            line-height: 120%
+            margin-bottom: 20px
+            img 
+                margin: 0
+                max-width: 40%
+        &-info 
+            padding: 40px 30px
+            p 
+                font-size: 14px
 
 .vlt
     &-doc
+        &-img
+            display: inline-block
+            max-width: 33%
         &_item
             display: block
             width: 48%
@@ -43,8 +136,12 @@ table
             padding-left: 70px
             background-image: url('../assets/img/doc-2.png')
             background-repeat: no-repeat
-            background-size: 40px auto 
+            background-size: 40px auto
             background-position: center left 15px
+            @media screen and ( max-width: 800px )
+                width: 100%
+                font-size: 16px
+
     &-product
         &-content
             position: relative
@@ -62,6 +159,7 @@ table
             top: 50%
             left: -40px
             transform: scale(-1)
+            z-index: 1111
             &.swiper-button-disabled
                 opacity: 0
         &-next
@@ -69,10 +167,20 @@ table
             right: -40px
             transform: scale(1)
 
+        @media screen and ( max-width: 1000px )
+            &-prev
+                top: 40%
+                left: -12px
+            &-next
+                top: 40%
+                right: -12px
+
         &-btns
+            width: 245px
             display: flex
             flex-direction: column
             justify-content: space-between
+
         &_btn
             background-color: transparent
             padding: 0 0 0 10px
@@ -85,32 +193,77 @@ table
                 font-weight: 700
                 color: $prime
 
+        @media screen and ( max-width: 1000px )
+            &-btns
+                width: 100%
+                margin-bottom: 40px
+            &_btn
+                display: inline-block
+                padding: 10px
+                width: unset
+                &.active
+                    &::before
+                        content: ''
+                        display: inline-block
+                        width: 10px
+                        height: 10px
+                        border-radius: 50%
+                        background-color: $prime
+                        margin-right: 10px
+
+        &_img
+            width: calc( 100% - 245px )
+            max-width: 400px
+            @media screen and ( max-width: 1000px )
+                display: none
+
         &_item
             width: 50%
             &-img
                 margin-bottom: 20px
                 img
+                    aspect-ratio: 5/7
+                    object-fit: cover
                     display: block
                     width: 100%
             &__heading
                 color: $prime
                 font-size: 24px
                 margin: 0 0 15px
+                line-height: 130%
 
             &__text
                 font-size: 18px
                 line-height: 130%
                 margin: 0
+            @media screen and ( max-width: 1400px )
+                &__heading
+                    font-size: 20px
+                    margin-bottom: 15px
+                &-img
+                    margin-bottom: 15px
+                &__text
+                    font-size: 16px
+
     &-ul
         padding: 0
         list-style: none
         li
             line-height: 130%
-            padding: 2px 0
+            padding: 4px 0
+            position: relative
+            font-size: 16px
+            padding-left: 20px
             &::before
                 content: '✓'
                 margin-right: 4px
                 color: $prime !important
+                position: absolute
+                left: 0
+                top: 5px
+            @media screen and ( max-width: 700px )
+                font-size: 14px
+
     &-navbar-inner--center
         .container
             max-width: 1400px

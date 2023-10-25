@@ -1342,6 +1342,7 @@ textarea:focus::-webkit-input-placeholder {
 .vlt-default-menu__navigation .sf-menu {
 	font-size: 0;
 	height: 100%;
+	text-align: center;
 	pointer-events: auto
 }
 
@@ -1713,18 +1714,21 @@ textarea:focus::-webkit-input-placeholder {
 }
 
 [data-anchor=Home] p {
+	line-height: 140%;
 	font-size: .9375rem;
 	max-width: 90%;
 	color: rgba(0, 0, 0, .6)
 }
 
 [data-anchor=About] p {
+	line-height: 140%;
 	font-size: .9375rem;
 	max-width: 100%;
 	color: rgba(0, 0, 0, .6)
 }
 
 [data-anchor=Contact] p {
+	line-height: 140%;
 	font-size: .9375rem;
 	color: rgba(0, 0, 0, .6)
 }
@@ -2661,7 +2665,7 @@ textarea:focus::-webkit-input-placeholder {
 
 .vlt-partners {
 	display: grid;
-	margin: 0 -3.125rem;
+	margin: 0;
 	padding: 0;
 	list-style-type: none;
 	grid-template-columns: repeat(4, 1fr);
